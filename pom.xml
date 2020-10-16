@@ -73,11 +73,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.example</groupId>
-			<artifactId>github-example-package</artifactId>
-			<version>1.2-SNAPSHOT</version>
-		</dependency>
-		<dependency>
 			<groupId>com.cdc.apihub.signer.manager</groupId>
 			<artifactId>signature-manager-java</artifactId>
 			<version>1.0.1-SNAPSHOT</version>

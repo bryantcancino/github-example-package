@@ -26,13 +26,13 @@ jobs:
     - name: Build with Maven
       env:
         GITHUB_TOKEN: ${{ github.token }}
-        env.GITHUB_TOKEN: ${{ github.token }}
-        env.GITHUB_ACTOR: ${{ github.actor }}
+        GITHUB_TOKEN: ${{ github.token }}
+        GITHUB_ACTOR: ${{ github.actor }}
       run: |
         echo "${GITHUB_TOKEN}"
         echo "${GITHUB_ACTOR}"
-        echo "${env.GITHUB_TOKEN}"
-        echo "${env.GITHUB_ACTOR}"        
+        echo "${GITHUB_TOKEN}"
+        echo "${GITHUB_ACTOR}"        
         mvn --settings settingsAPIHUB.xml -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven

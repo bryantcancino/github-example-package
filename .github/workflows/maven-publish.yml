@@ -26,9 +26,9 @@ jobs:
     - name: Build with Maven
       GITHUB_TOKEN: ${{ github.token }}
       run: |
-        echo "$GITHUB_TOKEN"
-        echo "$GITHUB_ACTOR"
-        echo "$GITHUB_USERNAME"
+        echo "${GITHUB_TOKEN}"
+        echo "${GITHUB_ACTOR}"
+        echo "${GITHUB_USERNAME}"
         mvn --settings settingsAPIHUB.xml -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven

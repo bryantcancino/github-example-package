@@ -24,9 +24,12 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
-      GITHUB_TOKEN: ${{ github.token }}
+      env:
+        GITHUB_TOKEN: ${{ github.token }}
       run: |
-        echo 'The selected color is'
+        echo "${GITHUB_TOKEN}"
+        echo "${GITHUB_ACTOR}"
+        echo "${GITHUB_USERNAME}"
         mvn --settings settingsAPIHUB.xml -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
